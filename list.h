@@ -19,5 +19,5 @@ int empty(link *list);            //meanless
 int counting(link *list);         //done
 int full(link *list);             //nope
 link converse(link *list);        //done
-link delete (link list);
+//link delete (link list);
 #endif

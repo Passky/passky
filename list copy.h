@@ -43,27 +43,32 @@ int empty(link *list)
     else
         return 0;
 }
-/*link delete (link list)
+int delete (link *list)
 {
-    link start = (list);
-    link re = (list);
-    if (start == NULL)
+    /*if (lim)
     {
-        puts("empty");
-        return NULL;
-    }
-    else if (start->next = NULL)
+        va_list ap;
+        va_start(ap, lim);
+        int rank = ap;
+        va_end(ap);
+    }*/
+    link start = (*list);
+    link c1 = (*list);
+    if (start == NULL || start->next == NULL)
         start = NULL;
     else
     {
-        while (start->next != NULL)
-            start = start->next;
-        start = NULL;
+        c1 = start->next;
+        while (c1->next != NULL)
+        {
+            c1 = c1->next;
+        }
+
+        return 0;
     }
-    return re;
 }
 
-link converse(link *list)
+/*link converse(link *list)
 {
     if ((list) = NULL)
         return NULL;

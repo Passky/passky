@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include "list.h"
-
 int main()
 {
     struct node start;

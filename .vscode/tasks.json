@@ -14,7 +14,7 @@
         {
             "label": "g++ build active file",
             "type": "shell",
-            "command": "/usr/bin/g++",
+            "command": "/usr/bin/gcc",
             "args": [
                 "-g",
                 "${file}",
