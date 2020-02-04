@@ -32,7 +32,7 @@ int counting(link *list)
     int count = 1;
     if (shit == NULL)
         return 0;
-    for (; shit->next != NULL; shit = shit->next)
+    for (; shit != NULL; shit = shit->next)
         count++;
     return count;
 }
@@ -52,8 +52,8 @@ int delete (link *list)
         int rank = ap;
         va_end(ap);
     }*/
-    link start = (*list);
-    link c1 = (*list);
+    link start = *list;
+    link c1 = *list;
     if (start == NULL || start->next == NULL)
         start = NULL;
     else
@@ -61,9 +61,11 @@ int delete (link *list)
         c1 = start->next;
         while (c1->next != NULL)
         {
+            start = start->next;
             c1 = c1->next;
         }
-
+        free(c1);
+        start->next = NULL;
         return 0;
     }
 }
