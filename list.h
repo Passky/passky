@@ -20,4 +20,5 @@ int counting(link *list);         //done
 int full(link *list);             //nope
 link converse(link *list);        //done
 int delete (link *list);
+link shit;
 #endif
