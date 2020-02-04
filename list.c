@@ -43,13 +43,14 @@ int empty(link *list)
     else
         return 0;
 }
-int delete (link *list)
+link delete (link list)
 {
-    link start = (*list);
+    link start = (list);
+    link start = (list);
     if (start == NULL)
     {
         puts("empty");
-        return 0;
+        return NULL;
     }
     else if (start->next = NULL)
         start = NULL;
