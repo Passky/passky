@@ -5,25 +5,17 @@
 
 int main()
 {
-    data shit1;
-    struct node pieceofshit;
-    struct node *shit;
-    link shit = pieceofshit.next;
-    link fuck = &pieceofshit;
-    start(&shit);
-    puts("enter you movie with rate");
-    while (scanf("%c %d", &shit1.name, &shit1.no) != EOF)
+    struct node start;
+    link list = &start;
+    lstart(&list);
+    struct data2 current;
+    for (int i = 0; i < 3; i++)
     {
-        if (shit1.no > 10)
-            break;
-        additem(shit1, &shit);
+        scanf("%d", &current.no);
+        additem(current, &list);
     }
-    link fuck2 = &pieceofshit;
-    //delete (&fuck2);
-
-    for (link alwaysshit = fuck->next; alwaysshit->next != NULL; alwaysshit = alwaysshit->next)
-        printf("%d", alwaysshit->sample.no);
-    return 0;
+    for (link laucher = &start; laucher->next != NULL; laucher = laucher->next)
+        printf("%d", laucher->sample.no);
     /* link g1 = converse(&shit); */
     /* if(g1!=NULL) */
     /* for (; g1->next != NULL; g1 = g1->next) */

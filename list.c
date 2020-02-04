@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "list.h"
-void start(link *list)
+void lstart(link *list)
 {
     *list = NULL;
 }
@@ -46,7 +46,7 @@ int empty(link *list)
 link delete (link list)
 {
     link start = (list);
-    link start = (list);
+    link re = (list);
     if (start == NULL)
     {
         puts("empty");
@@ -60,7 +60,7 @@ link delete (link list)
             start = start->next;
         start = NULL;
     }
-    return 1;
+    return re;
 }
 
 /*link converse(link *list)
