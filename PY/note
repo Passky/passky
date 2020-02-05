@@ -2,7 +2,8 @@
 动态语言  不用声明
 [listname].insert/append
 -1是倒数第一个 可以往前类推
-可以list里套list 构成多维 list->[] tuple->()
+可以list里套list 构成多维 list->[] tuple->()  <- 声明
 tuple= const list
 (只有一个元素的tuple,需要加','消除歧义,而无元素仅需要[([内无内容])])
-tuple内可以嵌套一个元素可变的list 类似于指针
+tuple内可以嵌套一个元素可变的list 类似于指针  取单用序号
+dict->{} 一一对应 类似map 取单时为 dictname['具体内容']
