@@ -15,12 +15,16 @@ dict->{key:值,} 一一对应 类似map    取单时->dictname['key'] ->此时�
 set 存key 无value 用list作输入集合(内部元素不能重复)  方法:add remove
 被视作集合 可以用 & | ^等操作
 对不可变对象的操作,要用其他变量继承 如对string replace 比如 a='abc' ->a是变量 指向的abc是常量 [全员指针?]
-def fuck:
+function can set a installized tax //follow rank or declare
+//所以说 list是可变对象而且是个指针 所以会被默认参数append等操作改变
+// 操作是用x=listname 防止被被改变  
+//*tax 可变参数 ->tuple  也可以用于传入tuple或list
+def fuck(x,n=2):   //fuck(3)=fuck(3,2)
     pass  //替位 使运行
 import math //数学函数
 import xx   //其他.py文件 但是无.py后缀
 return xx,yy,zz  //return a tuple
-def my_abs(x):
+def my_abs(x):             //error
     if not isinstance(x, (int, float)):
         raise TypeError('bad operand type')
     if x >= 0:

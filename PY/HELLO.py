@@ -1,6 +1,8 @@
 x = (1, 2, 3)
-def create():
-    x = 1
-    z=2
-    return x,z
-print(create())
+def create(*shit):
+    sum=0
+    for fuck in shit:
+        sum += fuck
+    return sum
+y=create(x)
+print(y)
