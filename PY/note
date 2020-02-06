@@ -1,12 +1,29 @@
 什么是他妈的 .format (?)
 动态语言  不用声明
-[listname].insert/append
+[listname].insert/append/sort/replace(a,b)
 -1是倒数第一个 可以往前类推
 可以list里套list 构成多维 list->[] tuple->()  <- 声明
+range(x) from(0->x-1)
 tuple= const list
 (只有一个元素的tuple,需要加','消除歧义,而无元素仅需要[([内无内容])])
 tuple内可以嵌套一个元素可变的list 类似于指针  取单用序号
-dict->{key:值,} 一一对应 类似map    取单时->dictname['key'] ->此时可直接用等号关联  
+tuple can be directly print with a pair of bracket
+dict->{key:值,} 一一对应 类似map    取单时->dictname['key'] ->此时可直接用等号关联  ->无序
 || 判断存在 key in dictname or dictname.get(key)
-删除 dictname.pop(key)
+删除 dictname.pop(key) ||key对象要求不可变 因此不能用list以及变量
 ⬆吃内存;空间换时间
+set 存key 无value 用list作输入集合(内部元素不能重复)  方法:add remove
+被视作集合 可以用 & | ^等操作
+对不可变对象的操作,要用其他变量继承 如对string replace 比如 a='abc' ->a是变量 指向的abc是常量 [全员指针?]
+def fuck:
+    pass  //替位 使运行
+import math //数学函数
+import xx   //其他.py文件 但是无.py后缀
+return xx,yy,zz  //return a tuple
+def my_abs(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
