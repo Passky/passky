@@ -9,4 +9,5 @@ int main()
     qsort(x, sizeof(int), 5, _mathcmp1);
     for (int i = 0; i < 5;i++)
         printf("%d\n", x[i]);
+    
 }

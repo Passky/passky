@@ -36,3 +36,7 @@ def my_abs(x):             //error
         return x
     else:
         return -x
+generate 一边循环一边计算
+list生成可以用循环,且支持多重        
+相对应的 generate->() list->[]
+a.b = b, a+b == a,b=(b,a+b) //相比c少一个临时变量
