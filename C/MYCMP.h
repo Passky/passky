@@ -8,7 +8,7 @@
         a = a - b; \
     }
 #define MATHCMP(x, y, ...)                              \
-    int _cmp##__VA_ARGS__(const void *a, const void *b) \
+    int _mathcmp##__VA_ARGS__(const void *a, const void *b) \
     {                                                   \
         const x *p1 = (const x *)a;                     \
         const x *p2 = (const x *)b;                     \

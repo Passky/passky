@@ -1,14 +1,16 @@
 什么是他妈的 .format (?)
 动态语言  不用声明
+global 全局变量
+//list set dict ->可变
 [listname].insert/append/sort/replace(a,b)
 -1是倒数第一个 可以往前类推
-可以list里套list 构成多维 list->[] tuple->()  <- 声明
+可以list里套list 构成多维 list->[] tuple->()  <- 声明    list/tuplename[a:b]取出一个tuple
 range(x) from(0->x-1)
 tuple= const list
 (只有一个元素的tuple,需要加','消除歧义,而无元素仅需要[([内无内容])])
 tuple内可以嵌套一个元素可变的list 类似于指针  取单用序号
 tuple can be directly print with a pair of bracket
-dict->{key:值,} 一一对应 类似map    取单时->dictname['key'] ->此时可直接用等号关联  ->无序
+struct:dict->{key:值,} 一一对应 类似map    取单时->dictname['key'] ->此时可直接用等号关联  ->无序
 || 判断存在 key in dictname or dictname.get(key)
 删除 dictname.pop(key) ||key对象要求不可变 因此不能用list以及变量
 ⬆吃内存;空间换时间
@@ -18,7 +20,10 @@ set 存key 无value 用list作输入集合(内部元素不能重复)  方法:add
 function can set a installized tax //follow rank or declare
 //所以说 list是可变对象而且是个指针 所以会被默认参数append等操作改变
 // 操作是用x=listname 防止被被改变  
-//*tax 可变参数 ->tuple  也可以用于传入tuple或list
+//*tax 可变参数 ->tuple  也可以用于传入tuple或list,此时会得到关于所有个体的指针
+// 如果直接传入tuple或list 会得到一个指向tuple的指针 x[1]->tuple
+//用*xx 传入tuple或list则会嵌入内部tuple
+//当然可以直接用tuple和list当参数
 def fuck(x,n=2):   //fuck(3)=fuck(3,2)
     pass  //替位 使运行
 import math //数学函数

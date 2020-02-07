@@ -6,3 +6,4 @@ def create(*shit):
     return sum
 y=create(x)
 print(y)
+
