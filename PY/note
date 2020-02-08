@@ -3,6 +3,7 @@
 global 全局变量
 //list set dict ->可变
 [listname].insert/append/sort/replace(a,b)
+enumerate ->list变为索引 元素对
 -1是倒数第一个 可以往前类推
 可以list里套list 构成多维 list->[] tuple->()  <- 声明    list/tuplename[a:b]取出一个tuple
 range(x) from(0->x-1)
@@ -36,7 +37,7 @@ def my_abs(x):             //error
         return x
     else:
         return -x
-generate 一边循环一边计算
+generate 一边循环一边计算  // yield->函数内使用 声明generate 遇到yield就中断下次[继续]执行
 list生成可以用循环,且支持多重        
 相对应的 generate->() list->[]
 a.b = b, a+b == a,b=(b,a+b) //相比c少一个临时变量
