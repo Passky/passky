@@ -1,32 +1,15 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-class Student(object):
-
-    def __init__(self, name, score):
-        self.name = name
-        self.score = score
-
-    def print_score(self):
-        print('%s: %s' % (self.name, self.score))
-
-    def get_grade(self):
-        if self.score >= 90:
-            return 'A'
-        elif self.score >= 60:
-            return 'B'
-        else:
-            return 'C'
-
-bart = Student('Bart Simpson', 59)
-lisa = Student('Lisa Simpson', 87)
-class shit(Student):
-    
-fuck = shit('wu',100)
-fuck.print_score()
-#print('bart.name =', bart.name)
-#print('bart.score =', bart.score)
-#bart.print_score()
-
-#print('grade of Bart:', bart.get_grade())
-#print('grade of Lisa:', lisa.get_grade())
+import functools
+class shity(object):
+    @property
+    def score(self):
+        return self._score
+    @score.setter
+    def score(self,value):
+        if not isinstance(value,int):
+            raise ValueError('Score should be an integer')
+        elif value<0 or value>100:
+            raise ValueError('Should be between 0~100')
+        self._score=value
+s=shity()
+s.score=60
+print(s._score)

@@ -61,7 +61,4 @@ decorate ->undone
 偏函数->固定某些参数
 >>> import functools
 >>> int2 = functools.partial(int, base=2)
-def __*shit(): //使shit函数 private<-一个/两个下划线皆可
-class (继承的类 默认object)>
-def __shit__(self,a,b): 
-//特殊方法->把a,b绑定到self 通过self.a等访问 并在定义时赋值
+isinstance(x,type)  //判断类型
