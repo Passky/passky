@@ -3,5 +3,5 @@
     "vim.startInInsertMode": true,
     "vim.sneakReplacesF": true,
     "vim.sneakUseIgnorecaseAndSmartcase": true,
-    "vim.sneak": true
+    "vim.sneak": true,
 }
