@@ -1,6 +1,7 @@
 def __*shit(): //使shit函数 private<-一个/两个下划线皆可
 class (继承的类 默认object)>
 def __shit__(self,a,b): 
+就算用不着,类中方法也起码一个参数
 //特殊方法->把a,b绑定到self 通过self.a等访问 并在定义时赋值
 //属性也可以用"__"开头以private ->用方法访问
 也可用 ._class__name访问 
@@ -24,3 +25,4 @@ class Student(object):   //这里真的只能用slots
     __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
 @property <-(函数名都要是xx)-> @xx(not special).setter 把get方法变成属性->只定义getter方法，不定义setter方法就是一个只读属性
 decorate ⬇ 封装成attr用   ----大概可以检查参数吧
+多重继承 ->父类所有功能

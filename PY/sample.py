@@ -10,6 +10,10 @@ class shity(object):
         elif value<0 or value>100:
             raise ValueError('Should be between 0~100')
         self._score=value
-s=shity()
-s.score=60
-print(s._score)
+class shake(object):
+    def __getitem__(self,n):
+        print('Life die')
+class spicy(shity,shake):
+    pass
+s=spicy()
+s[4]
