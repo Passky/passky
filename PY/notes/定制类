@@ -29,3 +29,15 @@ def __getattr__(self, attr):
             return lambda: 25
         raise AttributeError('\'Student\' object has no attribute \'%s\'' % attr)
 __call__(self,...) 直接用实例本身调用->类似函数
+衍生类⬇
+from enum import Enum
+@unique #衍生类有无重复 value->默认赋值 from 1
+#自定义类需要继承Enum类
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+import enum
+@enum.unique
+class shit(enum.Enum):
+    avegege=1
+    fuck=2
+s=shit
+print(s.avegege)   #得到 shit.avegege
