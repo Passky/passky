@@ -1,3 +1,4 @@
+eval(计算式子)
 用默认参数实现参数可选!
 type() ->返回对应的class类型(用等号对比) ->types模块 ->有内建定义常量判断是否为函数 types.FunctionType\BuiltinFunctionType\LambdaType\GeneratorType(循环)
 isinstance(x,type)  //判断类型->继承关系

@@ -1,11 +1,16 @@
 import numpy
-st=input()
-sp1=list(map(int,input().split()))
-c=int(numpy.mean(sp1))
-x=0
-for i in range(int(st)-1):
-    z=sp1[i]-c
-    if z!=0:
-        sp1[i+1]+=z
-        x+=1
-print(x)
+putin=input()
+list=[]
+while putin!='':
+    list.append(putin)
+    putin=input()
+x=len(list)
+for i in range(x):
+    while()
+    z1=0
+    z2=0
+    if i=='W':
+        z1+=1
+    else:
+        z2+=1
+    
