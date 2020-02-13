@@ -1,0 +1,43 @@
+__init__(self,a,b)
+__str__  直接打印类名无方法时 return 后续字符串
+__repr__ 调试时返回 同上||可以用等号
+__iter__ 返回一个迭代对象->for in
+__getitem__ 方法当list使用->每次return的 //不一定能slice,也不能直接用完整功能
+class Fib(object):
+    def __getitem__(self, n):
+        if isinstance(n, int): # n是索引
+            a, b = 1, 1
+            for x in range(n):
+                a, b = b, a + b
+            return a
+        if isinstance(n, slice): # n是切片
+            start = n.start
+            stop = n.stop
+            if start is None:
+                start = 0
+            a, b = 1, 1
+            L = []
+            for x in range(stop):
+                if x >= start:
+                    L.append(a)
+                a, b = b, a + b
+            return L
+def __getattr__  (self.,attr):  ->试图调用|不存在|的attr时 return 一个
+动态处理
+def __getattr__(self, attr):
+        if attr=='age':
+            return lambda: 25
+        raise AttributeError('\'Student\' object has no attribute \'%s\'' % attr)
+__call__(self,...) 直接用实例本身调用->类似函数
+衍生类⬇
+from enum import Enum
+@unique #衍生类有无重复 value->默认赋值 from 1
+#自定义类需要继承Enum类
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+import enum
+@enum.unique
+class shit(enum.Enum):
+    avegege=1
+    fuck=2
+s=shit
+print(s.avegege)   #得到 shit.avegege
