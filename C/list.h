@@ -1,6 +1,9 @@
 #ifndef wu
 #define wu
 #define TSIZE 45
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 struct data2
 {
     int no;
@@ -9,10 +12,10 @@ struct data2
 typedef struct data2 data;
 struct node
 {
-    data sample;
+    int sample;
     struct node *next;
 };
-typedef struct node *link;
+typedef struct node* link;
 void lstart(link *list);          //done
 int additem(data da, link *list); //done
 int empty(link *list);            //meanless

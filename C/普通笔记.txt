@@ -4,3 +4,4 @@ __DATE__
 va_list/start/end
 ##/*链接*/__VA_ARGS__
 (,...)
+while(*a++= *b++) = strlen()

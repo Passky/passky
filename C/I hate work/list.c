@@ -1,112 +1,88 @@
-/* list.c -- functions supporting list operations */
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "list.h"
-
-/* local function prototype */
-static void CopyToNode(Item item, Node * pnode);
-
-/* interface functions   */
-/* set the list to empty */
-void InitializeList(List * plist)
+void lstart(link *list)
 {
-    * plist = NULL;
+    *list = NULL;
 }
-
-/* returns true if list is empty */
-bool ListIsEmpty(const List * plist)
+int additem(data da, link *list)
 {
-    if (*plist == NULL)
-        return true;
-    else
-        return false;
-}
-
-/* returns true if list is full */
-bool ListIsFull(const List * plist)
-{
-    Node * pt;
-    bool full;
-    
-    pt = (Node *) malloc(sizeof(Node));
-    if (pt == NULL)
-        full = true;
-    else
-        full = false;
-    free(pt);
-    
-    return full;
-}
-
-/* returns number of nodes */
-unsigned int ListItemCount(const List * plist)
-{
-    unsigned int count = 0;
-    Node * pnode = *plist;    /* set to start of list */
-    
-    while (pnode != NULL)
+    link start = *list;
+    link down = start;
+    link sank;
+    sank = (link)malloc(sizeof(link));
+    sank->next = NULL;
+    sank->sample = da;
+    if (start == NULL)
     {
-        ++count;
-        pnode = pnode->next;  /* set to next node     */
+        (*list) = sank;
     }
-    
+    else
+    {
+        while (down->next != NULL)
+            down = down->next;
+        down->next = sank;
+    }
+    return 1;
+}
+int counting(link *list)
+{
+    link shit = *list;
+    int count = 1;
+    if (shit == NULL)
+        return 0;
+    for (; shit->next != NULL; shit = shit->next)
+        count++;
     return count;
 }
-
-/* creates node to hold item and adds it to the end of */
-/* the list pointed to by plist (slow implementation)  */
-bool AddItem(Item item, List * plist)
+int empty(link *list)
 {
-    Node * pnew;
-    Node * scan = *plist;
-    
-    pnew = (Node *) malloc(sizeof(Node));
-    if (pnew == NULL)
-        return false;     /* quit function on failure  */
-    
-    CopyToNode(item, pnew);
-    pnew->next = NULL;
-    if (scan == NULL)          /* empty list, so place */
-        *plist = pnew;         /* pnew at head of list */
+    if (*list == NULL)
+        return 1;
+    else
+        return 0;
+}
+/*link delete (link list)
+{
+    link start = (list);
+    link re = (list);
+    if (start == NULL)
+    {
+        puts("empty");
+        return NULL;
+    }
+    else if (start->next = NULL)
+        start = NULL;
     else
     {
-        while (scan->next != NULL)
-            scan = scan->next;  /* find end of list    */
-        scan->next = pnew;      /* add pnew to end     */
+        while (start->next != NULL)
+            start = start->next;
+        start = NULL;
     }
-    
-    return true;
+    return re;
 }
 
-/* visit each node and execute function pointed to by pfun */
-void Traverse  (const List * plist, void (* pfun)(Item item) )
+link converse(link *list)
 {
-    Node * pnode = *plist;    /* set to start of list   */
-    
-    while (pnode != NULL)
+    if ((list) = NULL)
+        return NULL;
+    link cycle1, cycle2, nos1, nos2;
+    cycle1 = (link)malloc(sizeof(link));
+    cycle2 = (link)malloc(sizeof(link));
+    link next1;
+    cycle1->next = list;
+    cycle2->next = list;
+    for (cycle1 = cycle2; cycle1->next->next != NULL; cycle1 = cycle1->next)
     {
-        (*pfun)(pnode->item); /* apply function to item */
-        pnode = pnode->next;  /* advance to next item   */
+        nos1 = list;
+        for (nos2 = cycle2; nos2->next->next != NULL; nos2 = nos2->next)
+            if (nos2->next->sample.no > nos1->next->sample.no)
+            {
+                nos1 = cycle1->next;
+            }
+        link m = nos1;
+        next1->next = nos1;
     }
 }
-
-/* free memory allocated by malloc() */
-/* set list pointer to NULL          */
-void EmptyTheList(List * plist)
-{
-    Node * psave;
-    
-    while (*plist != NULL)
-    {
-        psave = (*plist)->next; /* save address of next node */
-        free(*plist);           /* free current node         */
-        *plist = psave;         /* advance to next node      */
-    }
-}
-
-/* local function definition  */
-/* copies an item into a node */
-static void CopyToNode(Item item, Node * pnode)
-{
-    pnode->item = item;  /* structure copy */
-}
+*/
