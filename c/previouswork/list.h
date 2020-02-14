@@ -30,15 +30,5 @@ int empty(link *list);            //meanless
 int counting(link *list);         //done
 int full(link *list);             //nope
 link converse(link *list);        //done
-void delete(link* list,link *shit)
-{
-    link *start = list;
-    link *follow = start;
-    start = start->next;
-    while (start->next!=NULL)
-    {
-        if()
-    }
-}
 //link delete (link list);
 #endif
