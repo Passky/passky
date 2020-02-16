@@ -5,3 +5,11 @@ va_list/start/end
 ##/*链接*/__VA_ARGS__
 (,...)
 while(*a++= *b++) = strlen()
+int **a=malloc2d(m,n)//动态分配m*n
+{
+int **t=(int**)malloc(m*sizeof(int*));
+for(int i =0;i<m;i++)
+{
+    t[i]=(int*)malloc(n*sizeof(int));
+}
+}
