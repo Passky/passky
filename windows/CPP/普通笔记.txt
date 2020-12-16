@@ -1,6 +1,0 @@
-assert
-__TIME__
-__DATE__
-va_list/start/end
-##/*链接*/__VA_ARGS__
-(,...)
